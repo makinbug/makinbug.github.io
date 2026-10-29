@@ -2,3 +2,36 @@ baseURL = "https://makinbug.github.io/"
 locale = "en-GB"
 title = "Makin'Bug"
 theme = "ananke"
+
+[[menus.main]]
+  name = "Home"
+  pageRef = "/"
+  weight = 10
+
+[[menus.main]]
+  name = "Services"
+  pageRef = "/services"
+  weight = 20
+
+[[menus.main]]
+  name = "Work"
+  pageRef = "/work"
+  weight = 30
+
+[[menus.main]]
+  name = "Products"
+  pageRef = "/products"
+  weight = 40
+
+[[menus.main]]
+  name = "About"
+  pageRef = "/about"
+  weight = 50
+
+[[menus.main]]
+  name = "Contact"
+  pageRef = "/contact"
+  weight = 60
+
+[params.ananke]
+  show_recent_posts = false
