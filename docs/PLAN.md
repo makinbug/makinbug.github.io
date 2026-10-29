@@ -24,10 +24,11 @@ Read CLAUDE.md and docs/PLAN.md. Do Stage N only, following its steps exactly. O
 
 ## Decisions
 
-The site is not a shop. It shows your CAD design, 3D printing and laser work, with product pages that send buyers to eBay.
+The site is not a shop. It shows your CAD design, 3D printing and laser work, with one page of products that sends buyers to eBay.
 
 | Date | Decision | Why |
 | --- | --- | --- |
+| 29 Oct 2026 | One "Made to Order" page for all eBay products, in three groups: Miscellaneous Bits, Airsoft Stuff, Cycling Things. No single product pages | Simpler to run and to add to. Each product is still found on Google through its eBay listing |
 | 29 Oct 2026 | Site shows "Makin'Bug, Telford, UK" and info@makinbug.uk. No Duda shipping or returns text. | Adi's choice at Stage 3. The name and address part is not settled: see Still open |
 | 29 Oct 2026 | Keep one Duda photo (the delta printer); product photos come from eBay | The product photos are already on the eBay listings; fewer files to copy |
 | 28 Oct 2026 | Plan master moves to `docs/PLAN.md` at Stage 1 | One home; a cheaper model finds it without being told |
@@ -49,7 +50,7 @@ Still open: whether "Makin'Bug, Telford, UK" is enough to show on the site. UK r
 | 1 | Basic site live on makinbug.github.io | Claude, then you merge | Sonnet |
 | 2 | Copy text and photos off Duda | Both | Haiku |
 | 3 | Main pages: Home, Services, Work, About, Contact, Privacy | Claude, from your answers | Sonnet |
-| 4 | Product pages with eBay buttons | Claude, from your list | Sonnet |
+| 4 | Made to Order page with eBay buttons | Claude, from your list | Sonnet |
 | 5 | Look and feel | Claude, you approve | Sonnet |
 | 6 | Checks before launch | Claude | Haiku |
 | 7 | Domain and email | You, plus one small Claude step | Haiku |
@@ -170,43 +171,48 @@ After the pull request, you:
 
 **Done when:** all six pages show, and the legal details are on Contact and in the footer.
 
-## Stage 4: product pages with eBay buttons
+## Stage 4: Made to Order page with eBay buttons
 
 **Who:** you, then Claude (Sonnet).
 
+All eBay products sit on one page, "Made to Order", at `/products/`. There are no single product pages. Each product is one row: a small photo on the left, then the name and a short description, then a "See price and buy on eBay" button on the right. On a phone the button drops below the text.
+
 Before you start, you:
 
-- [ ] Make a list. For each product: name, category (Cycling Things or Airsoft Stuff), its eBay link, one photo, and 1 to 3 lines about it.
+- [ ] Make a list. For each product: name, category (Miscellaneous Bits, Airsoft Stuff or Cycling Things), its eBay link, one photo, and 1 or 2 lines about it.
+- [ ] Pick 3 products for the home page.
 - [ ] Make sure each one is a Good 'til cancelled listing. In eBay's selling settings, check the out-of-stock option is on, so a listing that sells out is hidden but not ended. Then its link keeps working.
 
 Claude:
 
 - [ ] Make the branch `stage-4-products`.
-- [ ] Each product gets its own folder, `content/products/<name>/`, holding `index.md` and its photo. `index.md` looks like the example below.
-- [ ] No prices on the site. eBay prices change, and two prices that disagree look bad. The button says "See price and buy on eBay".
+- [ ] Put every product in one file, `data/products.yaml`, as in the example below. Photos go in `assets/products/`.
+- [ ] No prices on the site. eBay prices change, and two prices that disagree look bad.
 - [ ] Clean each eBay link down to `https://www.ebay.co.uk/itm/<number>`, with no tracking bits.
-- [ ] Templates: `layouts/products/list.html` shows cards grouped by category; `layouts/products/single.html` shows the photo, text and button.
-- [ ] Home page: show the three products with the lowest `weight` in the featured space.
-- [ ] Write `docs/ADD-A-PRODUCT.md`: how Adi adds a product himself on GitHub's website (copy a product folder, change the lines, upload the photo, commit to a new branch, open a pull request, merge).
-- [ ] Build, then open the pull request "Stage 4: products".
+- [ ] Template `layouts/products/list.html`: three groups, in this order: Miscellaneous Bits, Airsoft Stuff, Cycling Things. Inside a group, sort by `weight`. Each row as described above. The photo and the name also link to the listing.
+- [ ] Make the photos small with Hugo's image processing (about 160 pixels wide, plus a 320 pixel copy for sharp screens). Keep the full photo out of the page.
+- [ ] If a product has a category that isn't one of the three, the build must stop with a clear error (`errorf`), so a typo can't hide a product.
+- [ ] `content/products/_index.md`: title "Made to Order" and a one-line intro. In `hugo.toml`, rename the menu item to "Made to Order". Keep the address `/products/`.
+- [ ] Home page: in the featured space, show the 3 products marked `featured: true`, each with its photo, name and eBay button, then a "See everything" link to `/products/`.
+- [ ] Write `docs/ADD-A-PRODUCT.md`: how Adi adds a product himself on GitHub's website (upload the photo to `assets/products/`, copy one entry in `data/products.yaml` and change its lines, commit to a new branch, open a pull request, merge). Say that the spaces at the start of each line matter.
+- [ ] Build, then open the pull request "Stage 4: Made to Order page".
 
 ```
----
-title: "ODIN speedloader adapter"
-category: "Airsoft Stuff"
-ebay: "https://www.ebay.co.uk/itm/123456789012"
-image: "photo.jpg"
-alt: "Black 3D printed adapter fitted to an ODIN speedloader"
-weight: 10
----
-Two or three plain lines about the product.
+- name: "ODIN speedloader adapter"
+  category: "Airsoft Stuff"
+  ebay: "https://www.ebay.co.uk/itm/123456789012"
+  image: "odin-speedloader-adapter.jpg"
+  alt: "Black 3D printed adapter fitted to an ODIN speedloader"
+  text: "One or two plain lines about the product."
+  weight: 10
+  featured: true
 ```
 
 After the pull request, you:
 
-- [ ] Merge, then click every buy button on makinbug.github.io. Each must open the right listing.
+- [ ] Merge, then click every buy button on makinbug.github.io, on the page and on the home page. Each must open the right listing.
 
-**Done when:** every product has a page and every button opens its listing.
+**Done when:** every product shows in the right group and every button opens its listing.
 
 ## Stage 5: look and feel
 
