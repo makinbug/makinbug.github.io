@@ -1,0 +1,59 @@
+# Builds the site on every pull request and every push to main.
+# Deploys to GitHub Pages only on a push to main.
+name: Build and deploy Hugo site
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  HUGO_VERSION: 0.167.0
+  TZ: Europe/London
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Hugo extended
+        run: |
+          base="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}"
+          file="hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
+          cd "${RUNNER_TEMP}"
+          curl -sSLO "${base}/${file}"
+          curl -sSLO "${base}/hugo_${HUGO_VERSION}_checksums.txt"
+          sha256sum --ignore-missing -c "hugo_${HUGO_VERSION}_checksums.txt"
+          mkdir hugo-bin
+          tar -xzf "${file}" -C hugo-bin hugo
+          echo "${RUNNER_TEMP}/hugo-bin" >> "${GITHUB_PATH}"
+      - name: Check out the code
+        uses: actions/checkout@v7
+      - name: Build
+        run: hugo --gc --minify
+      - name: Upload the site
+        if: github.event_name == 'push'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: ./public
+
+  deploy:
+    if: github.event_name == 'push'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

@@ -1,0 +1,4 @@
+baseURL = "https://makinbug.github.io/"
+locale = "en-GB"
+title = "Makin'Bug"
+theme = "ananke"
