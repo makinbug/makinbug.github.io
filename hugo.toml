@@ -19,7 +19,7 @@ theme = "ananke"
   weight = 30
 
 [[menus.main]]
-  name = "Products"
+  name = "Made to Order"
   pageRef = "/products"
   weight = 40
 

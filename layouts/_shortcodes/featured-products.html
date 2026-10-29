@@ -1,0 +1,24 @@
+{{- /* Shows the products marked "featured: true" in data/products.yaml, then a link to the Made to Order page. */ -}}
+{{- $featured := collections.Where (hugo.Data.products | compare.Default (slice)) "featured" true -}}
+{{- if $featured -}}
+<section class="mv5">
+  <h2>Made to Order</h2>
+  <div class="flex-ns flex-wrap nl2 nr2 tc">
+    {{- range $featured -}}
+      {{- $res := resources.Get (printf "products/%s" .image) -}}
+      {{- if not $res -}}{{- fmt.Errorf "featured-products: no photo %q in assets/products/ for %q" .image .name -}}{{- end -}}
+      {{- if not .alt -}}{{- fmt.Errorf "featured-products: %q has no alt text" .name -}}{{- end -}}
+      {{- $small := $res.Resize "320x q82" -}}
+      {{- $big := $res.Resize "640x q82" -}}
+      <div class="w-100 w-third-ns ph2 mb4">
+        <a class="db" href="{{ .ebay }}">
+          <img class="db center mw-100 h-auto" src="{{ $small.RelPermalink }}" srcset="{{ $small.RelPermalink }} 320w, {{ $big.RelPermalink }} 640w" sizes="(min-width: 30em) 30vw, 90vw" width="{{ $small.Width }}" height="{{ $small.Height }}" alt="{{ .alt }}" loading="lazy">
+        </a>
+        <p class="f5 fw6 lh-title mt3 mb3"><a class="link dark-gray dim" href="{{ .ebay }}">{{ .name }}</a></p>
+        <a class="link dim br2 ph3 pv2 dib bg-black white f6 fw6" href="{{ .ebay }}">See price and buy on eBay</a>
+      </div>
+    {{- end -}}
+  </div>
+  <p class="tc"><a href="{{ (site.GetPage "/products").RelPermalink }}">See everything</a></p>
+</section>
+{{- end -}}
