@@ -28,7 +28,7 @@ The site is not a shop. It shows your CAD design, 3D printing and laser work, wi
 
 | Date | Decision | Why |
 | --- | --- | --- |
-| 29 Oct 2026 | One "Made to Order" page for all eBay products, in three groups: Miscellaneous Bits, Airsoft Stuff, Cycling Things. No single product pages | Simpler to run and to add to. Each product is still found on Google through its eBay listing |
+| 29 Oct 2026 | One "Made to Order" page for all eBay products, in three groups: Miscellaneous Bits, Airsoft Stuff, Cycling Things. No single product pages. Each row shows the eBay title, no description | Simpler to run and to add to. Each product is still found on Google through its eBay listing |
 | 29 Oct 2026 | Site shows "Makin'Bug, Telford, UK" and info@makinbug.uk. No Duda shipping or returns text. | Adi's choice at Stage 3. The name and address part is not settled: see Still open |
 | 29 Oct 2026 | Keep one Duda photo (the delta printer); product photos come from eBay | The product photos are already on the eBay listings; fewer files to copy |
 | 28 Oct 2026 | Plan master moves to `docs/PLAN.md` at Stage 1 | One home; a cheaper model finds it without being told |
@@ -175,35 +175,35 @@ After the pull request, you:
 
 **Who:** you, then Claude (Sonnet).
 
-All eBay products sit on one page, "Made to Order", at `/products/`. There are no single product pages. Each product is one row: a small photo on the left, then the name and a short description, then a "See price and buy on eBay" button on the right. On a phone the button drops below the text.
+All eBay products sit on one page, "Made to Order", at `/products/`. There are no single product pages. Each product is one row: a small photo on the left, then the eBay title, then a "See price and buy on eBay" button on the right. On a phone the button drops below the text.
 
 Before you start, you:
 
-- [ ] Make a list. For each product: name, category (Miscellaneous Bits, Airsoft Stuff or Cycling Things), its eBay link, one photo, and 1 or 2 lines about it.
-- [ ] Pick 3 products for the home page.
+- [x] Make a list. For each product: its eBay title, category (Miscellaneous Bits, Airsoft Stuff or Cycling Things), its eBay link and one photo. No descriptions: the eBay title says enough. Attach the list to the session as `products.yaml`.
+- [x] Pick 3 products for the home page.
 - [ ] Make sure each one is a Good 'til cancelled listing. In eBay's selling settings, check the out-of-stock option is on, so a listing that sells out is hidden but not ended. Then its link keeps working.
 
 Claude:
 
 - [ ] Make the branch `stage-4-products`.
-- [ ] Put every product in one file, `data/products.yaml`, as in the example below. Photos go in `assets/products/`.
+- [ ] Put every product in one file, `data/products.yaml`, as in the example below. Start from Adi's list.
+- [ ] For each product, download the photo at `photo_url`, make it at most 1600 pixels wide, and save it in `assets/products/` under the `image` name. Then delete the `photo_url` lines.
 - [ ] No prices on the site. eBay prices change, and two prices that disagree look bad.
 - [ ] Clean each eBay link down to `https://www.ebay.co.uk/itm/<number>`, with no tracking bits.
-- [ ] Template `layouts/products/list.html`: three groups, in this order: Miscellaneous Bits, Airsoft Stuff, Cycling Things. Inside a group, sort by `weight`. Each row as described above. The photo and the name also link to the listing.
+- [ ] Template `layouts/products/list.html`: three groups, in this order: Miscellaneous Bits, Airsoft Stuff, Cycling Things. Inside a group, sort by `weight`. Hide a group that has no products. Each row as described above. The photo and the name also link to the listing.
 - [ ] Make the photos small with Hugo's image processing (about 160 pixels wide, plus a 320 pixel copy for sharp screens). Keep the full photo out of the page.
 - [ ] If a product has a category that isn't one of the three, the build must stop with a clear error (`errorf`), so a typo can't hide a product.
 - [ ] `content/products/_index.md`: title "Made to Order" and a one-line intro. In `hugo.toml`, rename the menu item to "Made to Order". Keep the address `/products/`.
-- [ ] Home page: in the featured space, show the 3 products marked `featured: true`, each with its photo, name and eBay button, then a "See everything" link to `/products/`.
+- [ ] Home page: in the featured space, show the 3 products marked `featured: true`, each with its photo, title and eBay button, then a "See everything" link to `/products/`.
 - [ ] Write `docs/ADD-A-PRODUCT.md`: how Adi adds a product himself on GitHub's website (upload the photo to `assets/products/`, copy one entry in `data/products.yaml` and change its lines, commit to a new branch, open a pull request, merge). Say that the spaces at the start of each line matter.
 - [ ] Build, then open the pull request "Stage 4: Made to Order page".
 
 ```
-- name: "ODIN speedloader adapter"
+- name: "AK ODIN M12 Speedloader Adapter Mid-Cap Magazine Airsoft With BB Retention"
   category: "Airsoft Stuff"
   ebay: "https://www.ebay.co.uk/itm/123456789012"
   image: "odin-speedloader-adapter.jpg"
   alt: "Black 3D printed adapter fitted to an ODIN speedloader"
-  text: "One or two plain lines about the product."
   weight: 10
   featured: true
 ```
