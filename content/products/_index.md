@@ -1,6 +1,6 @@
 ---
-title: "Products"
-description: "Ready-made Makin'Bug products, sold on eBay."
+title: "Made to Order"
+description: "Makin'Bug products, made to order in Telford and sold on eBay."
 ---
 
-Ready-made products are sold on eBay. They will appear here soon.
+Pick a product and the button takes you to its eBay listing.

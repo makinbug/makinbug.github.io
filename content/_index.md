@@ -17,7 +17,7 @@ Printed to order on a high precision delta printer, in one or two colours.
 
 Engraved and cut parts, from your design or one we draw for you.
 
-[//]: # (Featured products go here. Stage 4 fills this space.)
+{{< featured-products >}}
 
 ## What people say about us
 

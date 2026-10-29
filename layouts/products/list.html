@@ -1,0 +1,58 @@
+{{- /*
+  Made to Order page. Reads data/products.yaml (see docs/ADD-A-PRODUCT.md).
+  Groups are shown in this order. A group with no products is left out.
+  The build stops with a clear error if an entry is wrong, so nothing is hidden by a typo.
+*/ -}}
+{{ define "main" }}
+  {{- $groups := slice "Miscellaneous Bits" "Airsoft Stuff" "Cycling Things" -}}
+  {{- $products := hugo.Data.products | compare.Default (slice) -}}
+
+  {{- range $products -}}
+    {{- if not .name -}}{{- fmt.Errorf "data/products.yaml: an entry has no name" -}}{{- end -}}
+    {{- if not (collections.In $groups .category) -}}
+      {{- fmt.Errorf "data/products.yaml: %q has category %q. It must be one of: %s" .name .category (collections.Delimit $groups ", ") -}}
+    {{- end -}}
+    {{- if not (findRE `^https://www\.ebay\.co\.uk/itm/[0-9]+$` (.ebay | compare.Default "")) -}}
+      {{- fmt.Errorf "data/products.yaml: %q needs an eBay link like https://www.ebay.co.uk/itm/123456789012 (no extra bits)" .name -}}
+    {{- end -}}
+    {{- if not .alt -}}{{- fmt.Errorf "data/products.yaml: %q has no alt text" .name -}}{{- end -}}
+    {{- if not (resources.Get (printf "products/%s" (.image | compare.Default ""))) -}}
+      {{- fmt.Errorf "data/products.yaml: %q needs a photo in assets/products/ called %q" .name .image -}}
+    {{- end -}}
+  {{- end -}}
+
+  <article class="pa3 pa4-ns nested-copy-line-height">
+    <section class="cf ph3 ph5-l pv3 pv4-l f4 center measure-wide lh-copy nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }}">
+      {{- .Content -}}
+    </section>
+
+    <div class="center mw8 ph3-ns">
+      {{- range $groups -}}
+        {{- $group := . -}}
+        {{- $items := sort (collections.Where $products "category" $group) "weight" -}}
+        {{- if $items -}}
+          <section class="mb5">
+            <h2 class="f3 fw6 mt4 mb3 pb2 bb b--light-gray">{{ $group }}</h2>
+            {{- range $items -}}
+              {{- $res := resources.Get (printf "products/%s" .image) -}}
+              {{- $small := $res.Resize "160x q82" -}}
+              {{- $big := $res.Resize "320x q82" -}}
+              <div class="flex-ns items-center justify-between pv3 bb b--light-gray">
+                <div class="flex items-center">
+                  <a class="flex-none db" href="{{ .ebay }}" tabindex="-1" aria-hidden="true">
+                    <img class="db mw-100 h-auto" src="{{ $small.RelPermalink }}" srcset="{{ $small.RelPermalink }} 160w, {{ $big.RelPermalink }} 320w" sizes="160px" width="{{ $small.Width }}" height="{{ $small.Height }}" alt="{{ .alt }}" loading="lazy">
+                  </a>
+                  <div class="flex-auto pl3">
+                    <h3 class="f5 fw6 lh-title mv0"><a class="link dark-gray dim" href="{{ .ebay }}">{{ .name }}</a></h3>
+                    {{- with .text }}<p class="f6 lh-copy mt2 mb0">{{ . }}</p>{{ end -}}
+                  </div>
+                </div>
+                <a class="link dim br2 ph3 pv2 mt3 mt0-ns ml3-ns db tc flex-none bg-black white f6 fw6" href="{{ .ebay }}">See price and buy on eBay</a>
+              </div>
+            {{- end -}}
+          </section>
+        {{- end -}}
+      {{- end -}}
+    </div>
+  </article>
+{{ end }}
