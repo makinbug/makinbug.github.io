@@ -28,6 +28,7 @@ The site is not a shop. It shows your CAD design, 3D printing and laser work, wi
 
 | Date | Decision | Why |
 | --- | --- | --- |
+| 29 Oct 2026 | Keep one Duda photo (the delta printer); product photos come from eBay | The product photos are already on the eBay listings; fewer files to copy |
 | 28 Oct 2026 | Plan master moves to `docs/PLAN.md` at Stage 1 | One home; a cheaper model finds it without being told |
 | 28 Oct 2026 | Ananke theme, plus one stylesheet of ours. Look based on anthropic.com, mistral.ai, wisprflow.ai and the Duda site | Simple, maintained base; the look comes from our own styles |
 | 28 Oct 2026 | Buy buttons link to each Good 'til cancelled eBay listing | These listings keep their item number, so links last |
@@ -91,7 +92,7 @@ Why the repo name: the test site then works at https://makinbug.github.io with n
 
 Before you start, you:
 
-- [ ] Download this tab as Markdown (the doc's download or export menu) and attach the file to the session. Claude saves it as `docs/PLAN.md`.
+- [x] Download this tab as Markdown (the doc's download or export menu) and attach the file to the session. Claude saves it as `docs/PLAN.md`.
 
 Claude:
 
@@ -108,10 +109,10 @@ Claude:
 
 After the pull request, you:
 
-- [ ] Check the pull request's `build` check is green, then **Merge**.
-- [ ] Wait a few minutes, then open https://makinbug.github.io. You should see the "coming soon" line.
-- [ ] Ruleset "protect main": tick "Require status checks to pass" and add `build`. Save. Now nothing can merge if the site fails to build.
-- [ ] Ask Claude in a normal chat to swap this tab for a pointer to `docs/PLAN.md`.
+- [x] Check the pull request's `build` check is green, then **Merge**.
+- [x] Wait a few minutes, then open https://makinbug.github.io. You should see the "coming soon" line.
+- [x] Ruleset "protect main": tick "Require status checks to pass" and add `build`. Save. Now nothing can merge if the site fails to build.
+- [x] Ask Claude in a normal chat to swap this tab for a pointer to `docs/PLAN.md`.
 
 **Done when:** the test site shows the line, and the build check is required.
 
@@ -121,17 +122,17 @@ After the pull request, you:
 
 Before you start, you:
 
-- [ ] Open each page on makinbug.dudaone.com: Home, Store (Cycling Things, Airsoft Stuff), Services, About, Privacy. Save every photo you want to keep, plus the logo (right-click, **Save image as**), into one folder.
-- [ ] Attach the photos to the session. If there are too many, upload them on GitHub instead: in the branch `stage-2-duda-copy`, **Add file**, **Upload files**, into a folder `incoming/`.
+- [x] Open each page on makinbug.dudaone.com: Home, Store (Cycling Things, Airsoft Stuff), Services, About, Privacy. Save every photo you want to keep, plus the logo (right-click, **Save image as**), into one folder.
+- [x] Attach the photos to the session. If there are too many, upload them on GitHub instead: in the branch `stage-2-duda-copy`, **Add file**, **Upload files**, into a folder `incoming/`.
 
 Claude:
 
-- [ ] Make (or use) the branch `stage-2-duda-copy`.
-- [ ] Read each Duda page and save its text as Markdown in `docs/duda-copy/`, one file per page (for example `services.md`). Skip "My Account". If the session can't open the site, ask Adi to paste each page's text.
-- [ ] Copy the four customer reviews word for word, with the names exactly as Duda shows them, into `docs/duda-copy/reviews.md`.
-- [ ] Resize each photo to the photo rule, save it in `docs/duda-copy/images/`, and delete `incoming/` if it was used.
-- [ ] List every photo in `docs/duda-copy/images.md`: file name and one line on what it shows (later this becomes its alt text).
-- [ ] Open the pull request "Stage 2: copy of the Duda content".
+- [x] Make (or use) the branch `stage-2-duda-copy`.
+- [x] Read each Duda page and save its text as Markdown in `docs/duda-copy/`, one file per page (for example `services.md`). Skip "My Account". If the session can't open the site, ask Adi to paste each page's text.
+- [x] Copy the four customer reviews word for word, with the names exactly as Duda shows them, into `docs/duda-copy/reviews.md`.
+- [x] Resize each photo to the photo rule, save it in `docs/duda-copy/images/`, and delete `incoming/` if it was used.
+- [x] List every photo in `docs/duda-copy/images.md`: file name and one line on what it shows (later this becomes its alt text).
+- [x] Open the pull request "Stage 2: copy of the Duda content".
 
 After the pull request, you:
 
