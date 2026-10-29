@@ -179,23 +179,23 @@ All eBay products sit on one page, "Made to Order", at `/products/`. There are n
 
 Before you start, you:
 
-- [ ] Make a list. For each product: name, category (Miscellaneous Bits, Airsoft Stuff or Cycling Things), its eBay link, one photo, and 1 or 2 lines about it.
+- [x] Make a list. For each product: name, category (Miscellaneous Bits, Airsoft Stuff or Cycling Things), its eBay link, one photo, and 1 or 2 lines about it.
 - [ ] Pick 3 products for the home page.
 - [ ] Make sure each one is a Good 'til cancelled listing. In eBay's selling settings, check the out-of-stock option is on, so a listing that sells out is hidden but not ended. Then its link keeps working.
 
 Claude:
 
-- [ ] Make the branch `stage-4-products`.
-- [ ] Put every product in one file, `data/products.yaml`, as in the example below. Photos go in `assets/products/`.
-- [ ] No prices on the site. eBay prices change, and two prices that disagree look bad.
-- [ ] Clean each eBay link down to `https://www.ebay.co.uk/itm/<number>`, with no tracking bits.
-- [ ] Template `layouts/products/list.html`: three groups, in this order: Miscellaneous Bits, Airsoft Stuff, Cycling Things. Inside a group, sort by `weight`. Each row as described above. The photo and the name also link to the listing.
-- [ ] Make the photos small with Hugo's image processing (about 160 pixels wide, plus a 320 pixel copy for sharp screens). Keep the full photo out of the page.
-- [ ] If a product has a category that isn't one of the three, the build must stop with a clear error (`errorf`), so a typo can't hide a product.
-- [ ] `content/products/_index.md`: title "Made to Order" and a one-line intro. In `hugo.toml`, rename the menu item to "Made to Order". Keep the address `/products/`.
-- [ ] Home page: in the featured space, show the 3 products marked `featured: true`, each with its photo, name and eBay button, then a "See everything" link to `/products/`.
-- [ ] Write `docs/ADD-A-PRODUCT.md`: how Adi adds a product himself on GitHub's website (upload the photo to `assets/products/`, copy one entry in `data/products.yaml` and change its lines, commit to a new branch, open a pull request, merge). Say that the spaces at the start of each line matter.
-- [ ] Build, then open the pull request "Stage 4: Made to Order page".
+- [x] Make the branch `stage-4-products`.
+- [x] Put every product in one file, `data/products.yaml`, as in the example below. Photos go in `assets/products/`.
+- [x] No prices on the site. eBay prices change, and two prices that disagree look bad.
+- [x] Clean each eBay link down to `https://www.ebay.co.uk/itm/<number>`, with no tracking bits.
+- [x] Template `layouts/products/list.html`: three groups, in this order: Miscellaneous Bits, Airsoft Stuff, Cycling Things. Inside a group, sort by `weight`. Each row as described above. The photo and the name also link to the listing.
+- [x] Make the photos small with Hugo's image processing (about 160 pixels wide, plus a 320 pixel copy for sharp screens). Keep the full photo out of the page.
+- [x] If a product has a category that isn't one of the three, the build must stop with a clear error (`errorf`), so a typo can't hide a product.
+- [x] `content/products/_index.md`: title "Made to Order" and a one-line intro. In `hugo.toml`, rename the menu item to "Made to Order". Keep the address `/products/`.
+- [x] Home page: in the featured space, show the 3 products marked `featured: true`, each with its photo, name and eBay button, then a "See everything" link to `/products/`.
+- [x] Write `docs/ADD-A-PRODUCT.md`: how Adi adds a product himself on GitHub's website (upload the photo to `assets/products/`, copy one entry in `data/products.yaml` and change its lines, commit to a new branch, open a pull request, merge). Say that the spaces at the start of each line matter.
+- [x] Build, then open the pull request "Stage 4: Made to Order page".
 
 ```
 - name: "ODIN speedloader adapter"

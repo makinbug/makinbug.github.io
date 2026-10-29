@@ -1,8 +1,7 @@
 # Makin'Bug product list for Stage 4 (data/products.yaml)
 # Made 29 Oct 2026 from the eBay Seller Hub active listings.
 # 18 listings in stock. Left out: Titanium Bag Support Decaleur (226721239559), out of stock.
-# photo_url is the main eBay photo. Stage 4 downloads it, saves it as "image"
-# in assets/products/, then removes the photo_url line.
+# Photos are in assets/products/. See docs/ADD-A-PRODUCT.md.
 # name is the eBay title. No descriptions (Adi, 29 Oct 2026).
 # featured: picked by most watchers on eBay. Change if you like.
 
@@ -12,7 +11,6 @@
   category: "Miscellaneous Bits"
   ebay: "https://www.ebay.co.uk/itm/227152759070"
   image: "leather-card-holder-kit.jpg"
-  photo_url: "https://i.ebayimg.com/images/g/h8AAAeSwzKdpSsKl/s-l1600.jpg"
   alt: "Full grain leather card holder wallet kit"
   weight: 10
 
@@ -20,7 +18,6 @@
   category: "Miscellaneous Bits"
   ebay: "https://www.ebay.co.uk/itm/227152881231"
   image: "leather-key-holder.jpg"
-  photo_url: "https://i.ebayimg.com/images/g/P9sAAeSwNoNpU8Hd/s-l1600.jpg"
   alt: "Leather key holder with a solid brass fitting"
   weight: 20
 
@@ -28,7 +25,6 @@
   category: "Miscellaneous Bits"
   ebay: "https://www.ebay.co.uk/itm/227196821594"
   image: "kraft-paper-folder-insert.jpg"
-  photo_url: "https://i.ebayimg.com/images/g/fk8AAeSw~85pfgbc/s-l1600.jpg"
   alt: "Kraft paper pocket folder insert for a journal"
   weight: 30
 
@@ -36,7 +32,6 @@
   category: "Miscellaneous Bits"
   ebay: "https://www.ebay.co.uk/itm/226785552227"
   image: "magnetic-bit-holder-dewalt.jpg"
-  photo_url: "https://i.ebayimg.com/images/g/TDMAAOSwt25oOayc/s-l1600.jpg"
   alt: "Magnetic bit holder fitted to a drill"
   weight: 40
 
@@ -44,7 +39,6 @@
   category: "Miscellaneous Bits"
   ebay: "https://www.ebay.co.uk/itm/226706557443"
   image: "magnetic-bit-holder-bosch.jpg"
-  photo_url: "https://i.ebayimg.com/images/g/X~kAAOSwZs1n~9RH/s-l1600.jpg"
   alt: "Magnetic bit holder fitted to a Bosch drill"
   weight: 50
 
@@ -52,7 +46,6 @@
   category: "Miscellaneous Bits"
   ebay: "https://www.ebay.co.uk/itm/226450813777"
   image: "mirror-camera-bracket-type-a.jpg"
-  photo_url: "https://i.ebayimg.com/images/g/S5IAAeSw4TBpxmJt/s-l1600.jpg"
   alt: "3D printed offset bracket for a mirror dash camera"
   weight: 60
   featured: true
@@ -61,7 +54,6 @@
   category: "Miscellaneous Bits"
   ebay: "https://www.ebay.co.uk/itm/227275396557"
   image: "mirror-camera-bracket-type-b.jpg"
-  photo_url: "https://i.ebayimg.com/images/g/aMMAAeSwAUppxkm7/s-l1600.jpg"
   alt: "3D printed offset bracket for a mirror dash camera"
   weight: 70
 
@@ -69,7 +61,6 @@
   category: "Miscellaneous Bits"
   ebay: "https://www.ebay.co.uk/itm/227275444198"
   image: "mirror-camera-bracket-type-c.jpg"
-  photo_url: "https://i.ebayimg.com/images/g/vs8AAeSwmeRpxleE/s-l1600.jpg"
   alt: "3D printed offset bracket for a mirror dash camera"
   weight: 80
 
@@ -77,7 +68,6 @@
   category: "Miscellaneous Bits"
   ebay: "https://www.ebay.co.uk/itm/226297554708"
   image: "height-indicator-plate.jpg"
-  photo_url: "https://i.ebayimg.com/images/g/4ScAAOSwbgFmv2de/s-l1600.jpg"
   alt: "Vehicle height indicator plate for a dashboard"
   weight: 90
 
@@ -85,7 +75,6 @@
   category: "Miscellaneous Bits"
   ebay: "https://www.ebay.co.uk/itm/227096628305"
   image: "tent-peg-pusher.jpg"
-  photo_url: "https://i.ebayimg.com/images/g/3NQAAeSwE6dpIa1Y/s-l1600.jpg"
   alt: "Small 3D printed tent peg pusher"
   weight: 100
 
@@ -93,7 +82,6 @@
   category: "Miscellaneous Bits"
   ebay: "https://www.ebay.co.uk/itm/226216373331"
   image: "folding-picnic-table.jpg"
-  photo_url: "https://i.ebayimg.com/images/g/q3oAAOSwZUxmfpsh/s-l1600.jpg"
   alt: "Laser cut folding picnic table"
   weight: 110
 
@@ -103,7 +91,6 @@
   category: "Airsoft Stuff"
   ebay: "https://www.ebay.co.uk/itm/223829128666"
   image: "odin-sidewinder-adapters.jpg"
-  photo_url: "https://i.ebayimg.com/images/g/QDIAAOSwEpdhfBrT/s-l1600.jpg"
   alt: "3D printed speed loader adapters for airsoft magazines"
   weight: 10
   featured: true
@@ -112,7 +99,6 @@
   category: "Airsoft Stuff"
   ebay: "https://www.ebay.co.uk/itm/226302442405"
   image: "odin-universal-adapter.jpg"
-  photo_url: "https://i.ebayimg.com/images/g/368AAOSw609mwx4h/s-l1600.jpg"
   alt: "3D printed universal speed loader adapter for AEG magazines"
   weight: 20
 
@@ -120,7 +106,6 @@
   category: "Airsoft Stuff"
   ebay: "https://www.ebay.co.uk/itm/227127442954"
   image: "odin-ak-adapter.jpg"
-  photo_url: "https://i.ebayimg.com/images/g/KQ8AAeSwJcNpOua2/s-l1600.jpg"
   alt: "3D printed speed loader adapter for AK mid-cap magazines"
   weight: 30
 
@@ -128,7 +113,6 @@
   category: "Airsoft Stuff"
   ebay: "https://www.ebay.co.uk/itm/227127448799"
   image: "odin-mp5-adapter.jpg"
-  photo_url: "https://i.ebayimg.com/images/g/jWYAAeSw3H1pOuhj/s-l1600.jpg"
   alt: "3D printed speed loader adapter for MP5 mid-cap magazines"
   weight: 40
 
@@ -136,7 +120,6 @@
   category: "Airsoft Stuff"
   ebay: "https://www.ebay.co.uk/itm/226018847146"
   image: "odin-unloader-adapter.jpg"
-  photo_url: "https://i.ebayimg.com/images/g/9bcAAOSwDqZl22gm/s-l1600.jpg"
   alt: "3D printed magazine unloader adapter for a speed loader"
   weight: 50
 
@@ -144,7 +127,6 @@
   category: "Airsoft Stuff"
   ebay: "https://www.ebay.co.uk/itm/225407495946"
   image: "molle-retention-system.jpg"
-  photo_url: "https://i.ebayimg.com/images/g/0HoAAeSwWfppMyLE/s-l1600.jpg"
   alt: "3D printed MOLLE retention holder for an airsoft rifle"
   weight: 60
   featured: true
@@ -153,7 +135,6 @@
   category: "Airsoft Stuff"
   ebay: "https://www.ebay.co.uk/itm/227118127493"
   image: "sars-spare-rail-adapter.jpg"
-  photo_url: "https://i.ebayimg.com/images/g/Y4sAAeSw1blpMx5K/s-l1600.jpg"
   alt: "3D printed spare rail adapter"
   weight: 70
 
