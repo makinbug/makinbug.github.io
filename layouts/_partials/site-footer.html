@@ -1,0 +1,8 @@
+<footer class="{{ .Site.Params.background_color_class | compare.Default "bg-black" }} bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex flex-wrap justify-between items-center">
+    <p class="f5 fw4 white-70 ma0 pv2 ph3">
+      &copy; {{ now.Format "2006" }} {{ .Site.Title }}, Telford, UK
+    </p>
+    <a class="f5 fw4 hover-white white-70 no-underline pv2 ph3" href="{{ (site.GetPage "/privacy").RelPermalink }}">Privacy</a>
+  </div>
+</footer>

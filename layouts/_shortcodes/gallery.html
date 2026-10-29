@@ -1,0 +1,13 @@
+{{- /* Shows this page's own photos as a grid. Each photo needs alt and caption in the page's front matter (resources: params). */ -}}
+{{- with .Page.Resources.ByType "image" -}}
+<div class="flex flex-wrap nl2 nr2">
+  {{- range . -}}
+    {{- if not .Params.alt -}}{{- errorf "gallery: image %s has no alt text" .Name -}}{{- end -}}
+    {{- $img := .Resize "800x q82" -}}
+    <figure class="w-100 w-50-l ph2 ma0 mb4">
+      <img class="db w-100 h-auto" src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="{{ .Params.alt }}" loading="lazy">
+      {{- with .Params.caption }}<figcaption class="f6 gray mt2 tl">{{ . }}</figcaption>{{ end -}}
+    </figure>
+  {{- end -}}
+</div>
+{{- end -}}

@@ -28,6 +28,7 @@ The site is not a shop. It shows your CAD design, 3D printing and laser work, wi
 
 | Date | Decision | Why |
 | --- | --- | --- |
+| 29 Oct 2026 | Site shows "Makin'Bug, Telford, UK" and info@makinbug.uk. No Duda shipping or returns text. | Adi's choice at Stage 3. The name and address part is not settled: see Still open |
 | 29 Oct 2026 | Keep one Duda photo (the delta printer); product photos come from eBay | The product photos are already on the eBay listings; fewer files to copy |
 | 28 Oct 2026 | Plan master moves to `docs/PLAN.md` at Stage 1 | One home; a cheaper model finds it without being told |
 | 28 Oct 2026 | Ananke theme, plus one stylesheet of ours. Look based on anthropic.com, mistral.ai, wisprflow.ai and the Duda site | Simple, maintained base; the look comes from our own styles |
@@ -38,7 +39,7 @@ The site is not a shop. It shows your CAD design, 3D printing and laser work, wi
 | 16 Oct 2026 | Product pages with "Buy on eBay" buttons, no cart | eBay handles payment and postage |
 | 16 Oct 2026 | GitHub Pages and Hugo | Free hosting, same as the FOTTP site |
 
-Still open: which address goes on the site. Decide at Stage 3.
+Still open: whether "Makin'Bug, Telford, UK" is enough to show on the site. UK rules for online traders may need the owner's name and a full address. Decide before launch (Stage 7).
 
 ## Stages at a glance
 
@@ -146,22 +147,22 @@ After the pull request, you:
 
 Before you start, you write in the session:
 
-- [ ] For each service (CAD design, 3D printing, laser), 3 to 5 lines: what you do, materials, typical jobs, how people order.
-- [ ] Your full name as it should appear, and "trading as Makin'Bug".
-- [ ] The address to show. Decide between home and a virtual office (a real street address that forwards your post, for a monthly fee). The rule asks for an address where legal papers can reach you, so a PO box is best avoided. Not legal advice: if unsure, ask Trading Standards.
-- [ ] The email to show, for example `hello@makinbug.uk`. It starts working at Stage 7.
+- [x] For each service (CAD design, 3D printing, laser), 3 to 5 lines: what you do, materials, typical jobs, how people order.
+- [x] Your full name as it should appear, and "trading as Makin'Bug".
+- [x] The address to show. Decide between home and a virtual office (a real street address that forwards your post, for a monthly fee). The rule asks for an address where legal papers can reach you, so a PO box is best avoided. Not legal advice: if unsure, ask Trading Standards.
+- [x] The email to show, for example `hello@makinbug.uk`. It starts working at Stage 7.
 
 Claude:
 
-- [ ] Make the branch `stage-3-pages`. Use the text in `docs/duda-copy/` and Adi's answers. Don't invent facts.
-- [ ] Home, `content/_index.md`: one line on what Makin'Bug does; three short service blocks linking to their pages; a space for featured products (Stage 4 fills it); the four reviews; Facebook and Instagram links.
-- [ ] Services: `content/services/_index.md` plus `cad-design.md`, `3d-printing.md` and `laser.md`.
-- [ ] Work, `content/work/_index.md`: a grid of past work photos with captions. Add a small shortcode `layouts/shortcodes/gallery.html` that shows the page's own photos as a grid.
-- [ ] About, `content/about.md`.
-- [ ] Contact, `content/contact.md`: email, Facebook, Instagram, then the legal details (full name, trading as Makin'Bug, address).
-- [ ] Privacy, `content/privacy.md`: no cookies and no tracking; GitHub Pages logs visitors' IP addresses for security; eBay handles orders under its own privacy policy.
-- [ ] Menu: Home, Services, Work, Products, About, Contact. Footer: name, address and a Privacy link.
-- [ ] Build, then open the pull request "Stage 3: main pages".
+- [x] Make the branch `stage-3-pages`. Use the text in `docs/duda-copy/` and Adi's answers. Don't invent facts.
+- [x] Home, `content/_index.md`: one line on what Makin'Bug does; three short service blocks linking to their pages; a space for featured products (Stage 4 fills it); the four reviews; Facebook and Instagram links.
+- [x] Services: `content/services/_index.md` plus `cad-design.md`, `3d-printing.md` and `laser.md`.
+- [x] Work, `content/work/_index.md`: a grid of past work photos with captions. Add a small shortcode `layouts/shortcodes/gallery.html` that shows the page's own photos as a grid.
+- [x] About, `content/about.md`.
+- [x] Contact, `content/contact.md`: email, Facebook, Instagram, then the legal details (full name, trading as Makin'Bug, address).
+- [x] Privacy, `content/privacy.md`: no cookies and no tracking; GitHub Pages logs visitors' IP addresses for security; eBay handles orders under its own privacy policy.
+- [x] Menu: Home, Services, Work, Products, About, Contact. Footer: name, address and a Privacy link.
+- [x] Build, then open the pull request "Stage 3: main pages".
 
 After the pull request, you:
 
