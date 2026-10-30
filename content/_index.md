@@ -4,7 +4,7 @@ description: "CAD design, 3D printing, and laser engraving and cutting. Made to 
 # Home page header. Each headline line shows on its own line.
 headline:
   - "CAD design, 3D printing"
-  - "Laser engraving and cutting."
+  - "Laser engraving and cutting"
 lede: "Made to order in Telford, UK."
 ---
 
