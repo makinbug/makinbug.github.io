@@ -33,5 +33,14 @@ theme = "ananke"
   pageRef = "/contact"
   weight = 60
 
+[params]
+  # Stage 5: our own class names, styled in assets/css/custom.css
+  body_classes = "mb-body"
+  background_color_class = "mb-bar"
+  text_color = "mb-text"
+  post_content_classes = "mb-prose"
+
 [params.ananke]
   show_recent_posts = false
+  # Loads assets/css/custom.css through layouts/_partials/custom-css.html
+  custom_css = ["custom-css.html"]

@@ -1,0 +1,16 @@
+{{- $page := . -}}
+<div class="mb-bar">
+  <nav class="mb-nav" aria-label="Main">
+    <a class="mb-logo" href="{{ site.Home.RelPermalink }}">
+      <img src="{{ "img/logo.png" | relURL }}" width="382" height="96" alt="Makin'Bug home">
+    </a>
+    {{- with site.Menus.main }}
+    <ul class="mb-menu">
+      {{- range . }}
+        {{- $here := or ($page.IsMenuCurrent "main" .) (and (ne .Page site.Home) ($page.HasMenuCurrent "main" .)) }}
+        <li><a href="{{ .URL }}"{{ if $here }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+      {{- end }}
+    </ul>
+    {{- end }}
+  </nav>
+</div>

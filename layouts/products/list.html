@@ -21,33 +21,31 @@
     {{- end -}}
   {{- end -}}
 
-  <article class="pa3 pa4-ns nested-copy-line-height">
-    <section class="cf ph3 ph5-l pv3 pv4-l f4 center measure-wide lh-copy nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }}">
-      {{- .Content -}}
-    </section>
+  <article class="mb-page mb-prose">
+    {{- .Content -}}
 
-    <div class="center mw8 ph3-ns">
+    <div class="mb-wide mb-products">
       {{- range $groups -}}
         {{- $group := . -}}
         {{- $items := sort (collections.Where $products "category" $group) "weight" -}}
         {{- if $items -}}
-          <section class="mb5">
-            <h2 class="f3 fw6 mt4 mb3 pb2 bb b--light-gray">{{ $group }}</h2>
+          <section class="mb-group">
+            <h2>{{ $group }}</h2>
             {{- range $items -}}
               {{- $res := resources.Get (printf "products/%s" .image) -}}
               {{- $small := $res.Resize "160x q82" -}}
               {{- $big := $res.Resize "320x q82" -}}
-              <div class="flex-ns items-center justify-between pv3 bb b--light-gray">
-                <div class="flex items-center">
-                  <a class="flex-none db" href="{{ .ebay }}" tabindex="-1" aria-hidden="true">
-                    <img class="db mw-100 h-auto" src="{{ $small.RelPermalink }}" srcset="{{ $small.RelPermalink }} 160w, {{ $big.RelPermalink }} 320w" sizes="160px" width="{{ $small.Width }}" height="{{ $small.Height }}" alt="{{ .alt }}" loading="lazy">
+              <div class="mb-product">
+                <div class="mb-product-main">
+                  <a class="mb-product-img" href="{{ .ebay }}" tabindex="-1" aria-hidden="true">
+                    <img src="{{ $small.RelPermalink }}" srcset="{{ $small.RelPermalink }} 160w, {{ $big.RelPermalink }} 320w" sizes="160px" width="{{ $small.Width }}" height="{{ $small.Height }}" alt="{{ .alt }}" loading="lazy">
                   </a>
-                  <div class="flex-auto pl3">
-                    <h3 class="f5 fw6 lh-title mv0"><a class="link dark-gray dim" href="{{ .ebay }}">{{ .name }}</a></h3>
-                    {{- with .text }}<p class="f6 lh-copy mt2 mb0">{{ . }}</p>{{ end -}}
+                  <div class="mb-product-text">
+                    <h3><a href="{{ .ebay }}">{{ .name }}</a></h3>
+                    {{- with .text }}<p>{{ . }}</p>{{ end -}}
                   </div>
                 </div>
-                <a class="link dim br2 ph3 pv2 mt3 mt0-ns ml3-ns db tc flex-none bg-black white f6 fw6" href="{{ .ebay }}">See price and buy on eBay</a>
+                <a class="mb-btn" href="{{ .ebay }}">Buy on eBay</a>
               </div>
             {{- end -}}
           </section>

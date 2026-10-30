@@ -1,0 +1,17 @@
+{{- /* Section pages, for example Services: the page text, then one card per page in the section. */ -}}
+{{ define "main" }}
+  <article class="mb-page mb-prose">
+    {{ .Content }}
+    {{- with .Pages }}
+    <div class="mb-wide mb-cards">
+      {{- range . }}
+      <a class="mb-card" href="{{ .RelPermalink }}">
+        <h2>{{ .Title }}</h2>
+        {{- with .Description }}<p>{{ . }}</p>{{ end }}
+        <span class="mb-more">Read more</span>
+      </a>
+      {{- end }}
+    </div>
+    {{- end }}
+  </article>
+{{ end }}

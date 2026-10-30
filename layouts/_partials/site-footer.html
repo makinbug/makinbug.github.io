@@ -1,8 +1,8 @@
-<footer class="{{ .Site.Params.background_color_class | compare.Default "bg-black" }} bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex flex-wrap justify-between items-center">
-    <p class="f5 fw4 white-70 ma0 pv2 ph3">
-      &copy; {{ now.Format "2006" }} {{ .Site.Title }}, Telford, UK
-    </p>
-    <a class="f5 fw4 hover-white white-70 no-underline pv2 ph3" href="{{ (site.GetPage "/privacy").RelPermalink }}">Privacy</a>
+{{ partials.Include "mb-blocks.html" (dict "where" "foot") }}
+<footer class="mb-footer" role="contentinfo">
+  <div class="mb-footer-in">
+    <a class="mb-footer-logo" href="{{ site.Home.RelPermalink }}"><img src="{{ "img/icon.png" | relURL }}" width="40" height="40" alt="Makin'Bug home"></a>
+    <p>&copy; {{ now.Format "2006" }} {{ site.Title }}, Telford, UK</p>
+    <a href="{{ (site.GetPage "/privacy").RelPermalink }}">Privacy</a>
   </div>
 </footer>

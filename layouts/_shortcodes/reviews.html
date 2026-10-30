@@ -1,0 +1,2 @@
+{{- /* Wraps the customer reviews (Markdown quotes) so they show as cards. */ -}}
+<div class="mb-wide mb-reviews">{{ .Inner | .Page.RenderString (dict "display" "block") }}</div>

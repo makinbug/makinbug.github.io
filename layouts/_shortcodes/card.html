@@ -1,0 +1,2 @@
+{{- /* One card: title="..." link="/path/". The text inside is the card text. */ -}}
+<a class="mb-card" href="{{ .Get "link" }}"><h2>{{ .Get "title" }}</h2><p>{{ .Inner | .Page.RenderString }}</p><span class="mb-more">Read more</span></a>

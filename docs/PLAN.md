@@ -226,13 +226,13 @@ Before you start, you:
 
 Claude:
 
-- [ ] Make the branch `stage-5-look`.
-- [ ] Write `docs/STYLE.md`, a short style guide: 4 to 6 colours with hex codes, two fonts, spacing, buttons and cards. Base it on what Adi likes. Don't copy any site's logo, artwork or exact layout.
-- [ ] Fonts: free fonts with an open licence, stored in `static/fonts/` and served from the site itself, never linked from Google Fonts.
-- [ ] Put all the styles in `assets/css/custom.css` and load it with Ananke's `custom_css` setting (see `themes/ananke/README.md`). Template tweaks go only in `layouts/`.
-- [ ] Add the logo and a favicon (the small icon in the browser tab).
-- [ ] If the session can run a browser, take screenshots of every page type at phone width (390 pixels) and laptop width (1280 pixels), and describe them in the pull request.
-- [ ] Build, then open the pull request "Stage 5: look and feel".
+- [x] Make the branch `stage-5-look`.
+- [x] Write `docs/STYLE.md`, a short style guide: 4 to 6 colours with hex codes, two fonts, spacing, buttons and cards. Base it on what Adi likes. Don't copy any site's logo, artwork or exact layout.
+- [x] Fonts: free fonts with an open licence, stored in `static/fonts/` and served from the site itself, never linked from Google Fonts.
+- [x] Put all the styles in `assets/css/custom.css` and load it with Ananke's `custom_css` setting (see `themes/ananke/README.md`). Template tweaks go only in `layouts/`.
+- [x] Add the logo and a favicon (the small icon in the browser tab).
+- [x] If the session can run a browser, take screenshots of every page type at phone width (390 pixels) and laptop width (1280 pixels), and describe them in the pull request.
+- [x] Build, then open the pull request "Stage 5: look and feel".
 
 After the pull request, you:
 
