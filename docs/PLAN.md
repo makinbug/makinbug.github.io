@@ -138,7 +138,7 @@ Claude:
 
 After the pull request, you:
 
-- [ ] Check nothing is missing, then merge with **Squash and merge**. This keeps any big original photos out of the site's history.
+- [x] Check nothing is missing, then merge with **Squash and merge**. This keeps any big original photos out of the site's history.
 
 **Done when:** every Duda page and photo you want is in `docs/duda-copy/`.
 
@@ -167,7 +167,7 @@ Claude:
 
 After the pull request, you:
 
-- [ ] Merge, then read every page on makinbug.github.io.
+- [x] Merge, then read every page on makinbug.github.io.
 
 **Done when:** all six pages show, and the legal details are on Contact and in the footer.
 
@@ -180,8 +180,8 @@ All eBay products sit on one page, "Made to Order", at `/products/`. There are n
 Before you start, you:
 
 - [x] Make a list. For each product: name, category (Miscellaneous Bits, Airsoft Stuff or Cycling Things), its eBay link, one photo, and 1 or 2 lines about it.
-- [ ] Pick 3 products for the home page.
-- [ ] Make sure each one is a Good 'til cancelled listing. In eBay's selling settings, check the out-of-stock option is on, so a listing that sells out is hidden but not ended. Then its link keeps working.
+- [x] Pick 3 products for the home page.
+- [x] Make sure each one is a Good 'til cancelled listing. In eBay's selling settings, check the out-of-stock option is on, so a listing that sells out is hidden but not ended. Then its link keeps working.
 
 Claude:
 
@@ -220,9 +220,9 @@ After the pull request, you:
 
 Before you start, you:
 
-- [ ] Take screenshots of the home pages of anthropic.com, mistral.ai, wisprflow.ai and your Duda site, on the laptop and on the phone.
-- [ ] Under each one, write a line on what you like (for example "calm colours", "big clear headings").
-- [ ] Attach the screenshots, your notes and the logo file to the session.
+- [x] Take screenshots of the home pages of anthropic.com, mistral.ai, wisprflow.ai and your Duda site, on the laptop and on the phone.
+- [x] Under each one, write a line on what you like (for example "calm colours", "big clear headings").
+- [x] Attach the screenshots, your notes and the logo file to the session.
 
 Claude:
 
@@ -236,7 +236,7 @@ Claude:
 
 After the pull request, you:
 
-- [ ] Merge, then check every page on the phone and the laptop. For changes, run a new session: "Stage 5 fix: " plus what to change.
+- [x] Merge, then check every page on the phone and the laptop. For changes, run a new session: "Stage 5 fix: " plus what to change.
 
 **Done when:** you are happy with how it looks on both screens.
 
