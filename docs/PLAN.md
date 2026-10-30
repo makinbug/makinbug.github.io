@@ -248,14 +248,14 @@ After the pull request, you:
 
 Claude:
 
-- [ ] Make the branch `stage-6-checks`.
-- [ ] Build: no errors, no warnings.
-- [ ] Check every link and image inside the built site (the `public/` folder). Fix any broken ones.
-- [ ] Check every image has alt text, and every page has a title and a one-line description (Google shows it in search results).
-- [ ] Check there is a "page not found" page, and that `sitemap.xml` and `robots.txt` are made and let search engines in.
-- [ ] Search the built pages for scripts, fonts or styles loaded from other websites. There must be none.
-- [ ] Check the only email and address are the ones on Contact and in the footer.
-- [ ] Open the pull request "Stage 6: checks", with each check and its result.
+- [x] Make the branch `stage-6-checks`.
+- [x] Build: no errors, no warnings.
+- [x] Check every link and image inside the built site (the `public/` folder). Fix any broken ones.
+- [x] Check every image has alt text, and every page has a title and a one-line description (Google shows it in search results).
+- [x] Check there is a "page not found" page, and that `sitemap.xml` and `robots.txt` are made and let search engines in.
+- [x] Search the built pages for scripts, fonts or styles loaded from other websites. There must be none.
+- [x] Check the only email and address are the ones on Contact and in the footer.
+- [x] Open the pull request "Stage 6: checks", with each check and its result.
 
 After the pull request, you:
 

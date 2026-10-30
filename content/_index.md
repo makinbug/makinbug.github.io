@@ -1,5 +1,4 @@
 ---
-title: "Makin'Bug"
 description: "CAD design, 3D printing, and laser engraving and cutting. Made to order in Telford, UK."
 # Home page header. Each headline line shows on its own line.
 headline:
