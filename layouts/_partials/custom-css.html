@@ -1,0 +1,8 @@
+{{- /* Hands assets/css/custom.css to Ananke's custom_css setting, so it joins the one theme stylesheet.
+     The theme's CSS bundler cannot follow site-root paths like url("/fonts/..."), so they become full
+     site addresses here. They follow baseURL, so nothing changes by hand at Stage 7. */ -}}
+{{- with resources.Get "css/custom.css" -}}
+  {{- strings.Replace .Content `url("/fonts/` (printf `url("%s` (urls.AbsURL "fonts/")) | safe.HTML -}}
+{{- else -}}
+  {{- errorf "assets/css/custom.css is missing" -}}
+{{- end -}}

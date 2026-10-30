@@ -1,0 +1,11 @@
+{{ define "header" }}
+<header class="mb-top">
+  {{ partials.Include "site-navigation.html" . }}
+  <div class="mb-hero"><h1>Page not found</h1><p class="mb-lede">This is not the page you were looking for.</p></div>
+</header>
+{{ end }}
+{{ define "main" }}
+  <article class="mb-page mb-prose">
+    <p class="mb-center"><a class="mb-btn" href="{{ site.Home.RelPermalink }}">Go to the home page</a></p>
+  </article>
+{{ end }}

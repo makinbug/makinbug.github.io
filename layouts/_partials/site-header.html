@@ -1,0 +1,11 @@
+{{- /* Header for every page: menu, then the page title and its one-line description. */ -}}
+<header class="mb-top">
+  {{ partials.Include "site-navigation.html" . }}
+  <div class="mb-hero{{ if .IsHome }} mb-hero-home{{ end }}">
+    <h1>{{ .Params.headline | compare.Default .Title | compare.Default site.Title }}</h1>
+    {{- with .Params.lede | compare.Default .Params.description }}
+    <p class="mb-lede">{{ . }}</p>
+    {{- end }}
+  </div>
+  {{- if .IsHome }}{{ partials.Include "mb-blocks.html" (dict "where" "top") }}{{ end }}
+</header>
