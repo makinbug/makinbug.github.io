@@ -3,6 +3,11 @@ locale = "en-GB"
 title = "Makin'Bug"
 theme = "ananke"
 
+# Stage 6: make robots.txt (lets search engines in, points to the sitemap)
+enableRobotsTXT = true
+# Stage 6: no Categories or Tags pages. The site uses neither, so they were empty pages in the sitemap.
+disableKinds = ["taxonomy", "term"]
+
 [[menus.main]]
   name = "Home"
   pageRef = "/"
@@ -34,6 +39,8 @@ theme = "ananke"
   weight = 60
 
 [params]
+  # Stage 6: one-line description for pages that have none of their own, such as the 404 page
+  description = "CAD design, 3D printing, and laser engraving and cutting. Made to order in Telford, UK."
   # Stage 5: our own class names, styled in assets/css/custom.css
   body_classes = "mb-body"
   background_color_class = "mb-bar"
