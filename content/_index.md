@@ -5,10 +5,8 @@ description: "CAD design, 3D printing, and laser engraving and cutting. Made to 
 headline:
   - "CAD design, 3D printing"
   - "Laser engraving and cutting"
-lede: "Made to order in Telford, UK."
+lede: "Custom designs, made to order in Telford, UK"
 ---
-
-Makin'Bug designs and makes custom parts in Telford: CAD design, 3D printing, and laser engraving and cutting.
 
 {{< cards >}}
 {{< card title="CAD design" link="/services/cad-design/" >}}Full 3D models and 2D drawings in Fusion 360. No job is too small.{{< /card >}}
