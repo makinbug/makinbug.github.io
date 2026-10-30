@@ -140,7 +140,7 @@ Claude:
 
 After the pull request, you:
 
-- [ ] Check nothing is missing, then merge with **Squash and merge**. This keeps any big original photos out of the site's history.
+- [x] Check nothing is missing, then merge with **Squash and merge**. This keeps any big original photos out of the site's history.
 
 **Done when:** every Duda page and photo you want is in `docs/duda-copy/`.
 
@@ -169,7 +169,7 @@ Claude:
 
 After the pull request, you:
 
-- [ ] Merge, then read every page on makinbug.github.io.
+- [x] Merge, then read every page on makinbug.github.io.
 
 **Done when:** all six pages show, and the legal details are on Contact and in the footer.
 
@@ -182,7 +182,7 @@ All eBay products sit on one page, "Made to Order", at `/products/`. There are n
 Before you start, you:
 
 - [x] Make a list. For each product: name, category (Miscellaneous Bits, Airsoft Stuff or Cycling Things), its eBay link, one photo, and 1 or 2 lines about it.
-- [ ] Pick 3 products for the home page.
+- [x] Pick 3 products for the home page.
 - [x] Make sure each one is a Good 'til cancelled listing. In eBay's selling settings, check the out-of-stock option is on, so a listing that sells out is hidden but not ended. Then its link keeps working.
 
 Claude:
