@@ -2,7 +2,8 @@
 <header class="mb-top">
   {{ partials.Include "site-navigation.html" . }}
   <div class="mb-hero{{ if .IsHome }} mb-hero-home{{ end }}">
-    <h1>{{ .Params.headline | compare.Default .Title | compare.Default site.Title }}</h1>
+    {{- $headline := .Params.headline | compare.Default .Title | compare.Default site.Title }}
+    <h1>{{ if reflect.IsSlice $headline }}{{ range $headline }}<span class="mb-line">{{ . }}</span>{{ end }}{{ else }}{{ $headline }}{{ end }}</h1>
     {{- with .Params.lede | compare.Default .Params.description }}
     <p class="mb-lede">{{ . }}</p>
     {{- end }}

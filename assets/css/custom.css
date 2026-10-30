@@ -25,6 +25,8 @@
   --ink-soft: #5e5d59;
   --red: #c02432;
   --red-dark: #a51e2b;
+  --brand: #8d0100;
+  --brand-dark: #6e0100;
   --amber: #f4c96b;
   --coral: #ee9b80;
   --tint-amber: #fbeccb;
@@ -139,6 +141,7 @@ strong { font-weight: 600; }
   margin: 0 auto;
   max-width: 20em;
 }
+.mb-line { display: block; }
 .mb-lede {
   color: var(--ink-soft);
   font-size: 18px;
@@ -197,9 +200,9 @@ strong { font-weight: 600; }
 /* ---------- Buttons ---------- */
 .mb-btn {
   display: inline-block;
-  background: var(--red);
+  background: var(--brand);
   color: #fff;
-  border: 1px solid var(--red);
+  border: 1px solid var(--brand);
   border-radius: 8px;
   padding: 12px 20px;
   font-family: var(--sans);
@@ -209,7 +212,7 @@ strong { font-weight: 600; }
   text-align: center;
   text-decoration: none;
 }
-.mb-btn:hover { background: var(--red-dark); border-color: var(--red-dark); color: #fff; text-decoration: none; }
+.mb-btn:hover { background: var(--brand-dark); border-color: var(--brand-dark); color: #fff; text-decoration: none; }
 .mb-btn-2 { background: transparent; color: var(--ink); border-color: var(--line-strong); }
 .mb-btn-2:hover { background: var(--sand); border-color: var(--line-strong); color: var(--ink); }
 
