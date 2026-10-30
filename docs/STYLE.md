@@ -6,6 +6,7 @@ Stage 5, 30 Oct 2026. The styles live in `assets/css/custom.css`. This page says
 
 - A calm, warm look like claude.ai: off-white page, serif headings, plain sans text, lots of space.
 - A bit of colour on some things, like mistral.ai, but in softer shades.
+- One dark red only, for the logo, buttons, links and small marks (30 Oct 2026).
 - The same colours and fonts on the phone and the laptop.
 - Light theme only. No dark theme.
 - The old Duda look does not matter.
@@ -19,16 +20,15 @@ We take the mood from those sites, not their logos, artwork or layouts.
 | Paper | `#faf9f5` | Page background |
 | Sand | `#f0eee6` | Header line, cards, alternate bands, footer |
 | Ink | `#1f1e1d` | Headings and main text. Muted text uses `#5e5d59` |
-| Logo red | `#8d0100` | The logo and the buttons. Hover `#6e0100` |
-| Bug red | `#c02432` | From the logo icon. Links and small marks. Hover `#a51e2b` |
+| Logo red | `#8d0100` | From Adi's long logo. The logo, icons, buttons, links and small marks. Hover `#6e0100` |
 | Soft amber | `#f4c96b` | Colour blocks and accents |
 | Soft coral | `#ee9b80` | Colour blocks and accents |
 
-Card tints (the same colours, much lighter): amber `#fbeccb`, coral `#f9dfd3`, red `#f6dcd9`.
+Card tints (the same colours, much lighter): amber `#fbeccb`, coral `#f9dfd3`, red `#eddbd8`.
 
-The logo on the site is all Logo red, as in Adi's long logo file. The browser tab icon stays Bug red so it stands out in a row of tabs.
+The site uses one red only. Don't bring back the brighter red from the square logo.
 
-All text and background pairs pass WCAG AA contrast (4.5 to 1 or better). Bug red on Paper is 5.6 to 1. White on Logo red is 10 to 1 or better. Never put text on Soft amber or Soft coral at full strength; use the tints.
+All text and background pairs pass WCAG AA contrast (4.5 to 1 or better). Logo red on Paper is 9.3 to 1. White on Logo red is 9.8 to 1. Muted text on the red tint is 4.9 to 1. Never put text on Soft amber or Soft coral at full strength; use the tints.
 
 ## Fonts
 
@@ -61,7 +61,7 @@ Sizes (phone, then laptop):
 - Main button: Logo red, white text, 8px round corners, 12px by 20px padding, weight 600. Hover goes to `#6e0100`.
 - Second button: no fill, Ink text, 1px line in `#d6d3c9`, same shape. Hover fills with Sand.
 - The eBay button is always the main button. Its text is always "Buy on eBay".
-- Every link and button shows a 2px Bug red focus ring for keyboard users.
+- Every link and button shows a 2px Logo red focus ring for keyboard users.
 
 ## Cards
 
@@ -77,6 +77,6 @@ A row of stepped soft blocks (amber, coral, a small red one) sits under the home
 ## Logo and icons
 
 - `static/img/logo.png`: the long logo in Logo red, 96px tall, on a clear background. Shown 40px tall on the laptop, 32px on the phone.
-- `static/favicon.ico`, `static/favicon-32.png`: browser tab icon.
-- `static/apple-touch-icon.png`: icon for a phone home screen, on Paper.
+- `static/favicon.ico`, `static/favicon-32.png`: browser tab icon, in Logo red.
+- `static/apple-touch-icon.png`: icon for a phone home screen, in Logo red on Paper.
 - `static/img/icon.png`: the icon alone in Logo red, 160px, on a clear background. Used in the footer.

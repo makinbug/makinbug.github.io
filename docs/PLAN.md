@@ -28,8 +28,10 @@ The site is not a shop. It shows your CAD design, 3D printing and laser work, wi
 
 | Date | Decision | Why |
 | --- | --- | --- |
+| 30 Oct 2026 | One dark red, `#8d0100` from the long logo, for the logo, icons, buttons and links | Adi's choice after Stage 5. See `docs/STYLE.md` |
+| 30 Oct 2026 | "Makin'Bug, Telford, UK" and info@makinbug.uk are enough on the site. No owner's name or street address | Adi's choice. Settled, so don't ask again |
 | 29 Oct 2026 | One "Made to Order" page for all eBay products, in three groups: Miscellaneous Bits, Airsoft Stuff, Cycling Things. No single product pages | Simpler to run and to add to. Each product is still found on Google through its eBay listing |
-| 29 Oct 2026 | Site shows "Makin'Bug, Telford, UK" and info@makinbug.uk. No Duda shipping or returns text. | Adi's choice at Stage 3. The name and address part is not settled: see Still open |
+| 29 Oct 2026 | Site shows "Makin'Bug, Telford, UK" and info@makinbug.uk. No Duda shipping or returns text. | Adi's choice at Stage 3. Confirmed 30 Oct 2026 |
 | 29 Oct 2026 | Keep one Duda photo (the delta printer); product photos come from eBay | The product photos are already on the eBay listings; fewer files to copy |
 | 28 Oct 2026 | Plan master moves to `docs/PLAN.md` at Stage 1 | One home; a cheaper model finds it without being told |
 | 28 Oct 2026 | Ananke theme, plus one stylesheet of ours. Look based on anthropic.com, mistral.ai, wisprflow.ai and the Duda site | Simple, maintained base; the look comes from our own styles |
@@ -40,7 +42,7 @@ The site is not a shop. It shows your CAD design, 3D printing and laser work, wi
 | 16 Oct 2026 | Product pages with "Buy on eBay" buttons, no cart | eBay handles payment and postage |
 | 16 Oct 2026 | GitHub Pages and Hugo | Free hosting, same as the FOTTP site |
 
-Still open: whether "Makin'Bug, Telford, UK" is enough to show on the site. UK rules for online traders may need the owner's name and a full address. Decide before launch (Stage 7).
+Still open: nothing.
 
 ## Stages at a glance
 
@@ -181,7 +183,7 @@ Before you start, you:
 
 - [x] Make a list. For each product: name, category (Miscellaneous Bits, Airsoft Stuff or Cycling Things), its eBay link, one photo, and 1 or 2 lines about it.
 - [ ] Pick 3 products for the home page.
-- [ ] Make sure each one is a Good 'til cancelled listing. In eBay's selling settings, check the out-of-stock option is on, so a listing that sells out is hidden but not ended. Then its link keeps working.
+- [x] Make sure each one is a Good 'til cancelled listing. In eBay's selling settings, check the out-of-stock option is on, so a listing that sells out is hidden but not ended. Then its link keeps working.
 
 Claude:
 
@@ -210,7 +212,7 @@ Claude:
 
 After the pull request, you:
 
-- [ ] Merge, then click every buy button on makinbug.github.io, on the page and on the home page. Each must open the right listing.
+- [x] Merge, then click every buy button on makinbug.github.io, on the page and on the home page. Each must open the right listing.
 
 **Done when:** every product shows in the right group and every button opens its listing.
 
