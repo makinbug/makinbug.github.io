@@ -1,2 +1,6 @@
-{{- /* One card: title="..." link="/path/". The text inside is the card text. */ -}}
-<a class="mb-card" href="{{ .Get "link" }}"><h2>{{ .Get "title" }}</h2><p>{{ .Inner | .Page.RenderString }}</p><span class="mb-more">Read more</span></a>
+{{- /* One card. With link="/path/": a short card that links on (home page). Without a link: a full card with id="..." and the text inside as Markdown (Services page). */ -}}
+{{- with .Get "link" -}}
+<a class="mb-card" href="{{ . }}"><h2>{{ $.Get "title" }}</h2><p>{{ $.Inner | $.Page.RenderString }}</p><span class="mb-more">Read more</span></a>
+{{- else -}}
+<div class="mb-card mb-card-full"{{ with .Get "id" }} id="{{ . }}"{{ end }}><h2>{{ .Get "title" }}</h2>{{ .Page.RenderString (dict "display" "block") .Inner }}</div>
+{{- end -}}

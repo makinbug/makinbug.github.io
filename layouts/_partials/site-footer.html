@@ -3,6 +3,6 @@
   <div class="mb-footer-in">
     <a class="mb-footer-logo" href="{{ site.Home.RelPermalink }}"><img src="{{ "img/icon.png" | relURL }}" width="40" height="40" alt="Makin'Bug home"></a>
     <p>&copy; {{ now.Format "2006" }} {{ site.Title }}, Telford, UK</p>
-    <a href="{{ (site.GetPage "/privacy").RelPermalink }}">Privacy</a>
+    <nav class="mb-footer-links" aria-label="Footer"><a href="{{ (site.GetPage "/about").RelPermalink }}#contact">Contact</a> <a href="{{ (site.GetPage "/privacy").RelPermalink }}">Privacy</a></nav>
   </div>
 </footer>

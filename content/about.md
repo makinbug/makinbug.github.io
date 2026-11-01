@@ -7,6 +7,8 @@ The Makin' Bug... it afflicts more or less all of us with the need to make stuff
 
 Makin'Bug is less of a business and more of a home-based craft.
 
+Prices mostly cover costs, with a small margin. They stay low thanks to the cheapest available postage, reused padded envelopes and free web hosting.
+
 ## Plastic Fantastic
 
 It has always been important to design smart: to make parts that last for years, and that can be printed without supports to keep waste to a minimum. We use plastic that can be recycled, like PET, or that is biodegradable, like PVA and PLA.
@@ -14,3 +16,9 @@ It has always been important to design smart: to make parts that last for years,
 Even so, we cannot ignore the fact that what we do adds more plastic to the world. To offset this, we use only recycled filament from Filamentive. It is made from waste plastic from the polymer extrusion industry, remanufactured into filament.
 
 Please think twice when you buy something made of plastic, including from us. Choose plastics that can be recycled, and when you are done with it, remember to recycle it.
+
+## Contact
+
+Email: [info@makinbug.uk](mailto:info@makinbug.uk)
+
+Makin'Bug, Telford, UK

@@ -33,11 +33,6 @@ disableKinds = ["taxonomy", "term"]
   pageRef = "/about"
   weight = 50
 
-[[menus.main]]
-  name = "Contact"
-  pageRef = "/contact"
-  weight = 60
-
 [params]
   # Stage 6: one-line description for pages that have none of their own, such as the 404 page
   description = "CAD design, 3D printing, and laser engraving and cutting. Made to order in Telford, UK."

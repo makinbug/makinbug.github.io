@@ -8,9 +8,9 @@ lede: "Custom designs, made to order in Telford, UK"
 ---
 
 {{< cards >}}
-{{< card title="CAD design" link="/services/cad-design/" >}}Full 3D models and 2D drawings in Fusion 360. No job is too small.{{< /card >}}
-{{< card title="3D printing" link="/services/3d-printing/" >}}Printed to order on a high precision delta printer, in one or two colours.{{< /card >}}
-{{< card title="Laser engraving and cutting" link="/services/laser/" >}}Engraved and cut parts, from your design or one we draw for you.{{< /card >}}
+{{< card title="CAD design" link="/services/#cad-design" >}}Full 3D models and 2D drawings in Fusion 360.{{< /card >}}
+{{< card title="3D printing" link="/services/#3d-printing" >}}Printed to order on a high precision delta printer.{{< /card >}}
+{{< card title="Laser engraving and cutting" link="/services/#laser" >}}Cut and engraved on a large 800 x 1200 mm high precision laser.{{< /card >}}
 {{< /cards >}}
 
 {{< featured-products >}}
@@ -34,5 +34,3 @@ lede: "Custom designs, made to order in Telford, UK"
 >
 > Stewart Mitchell, 3D Hubs
 {{< /reviews >}}
-
-Find us on [Facebook](https://www.facebook.com/makinbug) and [Instagram](https://www.instagram.com/makinbug/).

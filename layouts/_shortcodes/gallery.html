@@ -1,5 +1,5 @@
-{{- /* Shows this page's own photos as a grid. Each photo needs alt and caption in the page's front matter (resources: params). */ -}}
-{{- with .Page.Resources.ByType "image" -}}
+{{- /* Shows this page's own photos as a grid, in file name order. Each photo needs alt and caption in the page's front matter (resources: params). */ -}}
+{{- with sort (.Page.Resources.ByType "image") "Name" -}}
 <div class="mb-wide mb-gallery">
   {{- range . -}}
     {{- if not .Params.alt -}}{{- errorf "gallery: image %s has no alt text" .Name -}}{{- end -}}
