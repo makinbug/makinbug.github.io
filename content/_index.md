@@ -10,7 +10,7 @@ lede: "Custom designs, made to order in Telford, UK"
 {{< cards >}}
 {{< card title="CAD design" link="/services/#cad-design" >}}Full 3D models and 2D drawings in Fusion 360.{{< /card >}}
 {{< card title="3D printing" link="/services/#3d-printing" >}}Printed to order on a high precision delta printer.{{< /card >}}
-{{< card title="Laser engraving and cutting" link="/services/#laser" >}}Using a large 800 x 1200 mm high precision laser.{{< /card >}}
+{{< card title="Laser engraving and cutting" link="/services/#laser" >}}Cut and engraved on a large 800 x 1200 mm high precision laser.{{< /card >}}
 {{< /cards >}}
 
 {{< featured-products >}}

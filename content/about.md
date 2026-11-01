@@ -7,7 +7,7 @@ The Makin' Bug... it afflicts more or less all of us with the need to make stuff
 
 Makin'Bug is less of a business and more of a home-based craft.
 
-Prices mostly cover costs, with small margins thanks to the cheapest available postage, reused padded envelopes and free web hosting.
+Prices mostly cover costs, with a small margin. They stay low thanks to the cheapest available postage, reused padded envelopes and free web hosting.
 
 ## Plastic Fantastic
 
