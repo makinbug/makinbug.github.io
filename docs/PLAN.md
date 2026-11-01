@@ -28,6 +28,7 @@ The site is not a shop. It shows your CAD design, 3D printing and laser work, wi
 
 | Date | Decision | Why |
 | --- | --- | --- |
+| 1 Nov 2026 | One Services page with full cards, no separate service pages. Contact details move to About; no Contact page. No Facebook or Instagram links on the site. No contact form for now | Adi's choice before Stage 7. Less to read and maintain. A form needs an outside service; Adi may look at it later |
 | 30 Oct 2026 | One dark red, `#8d0100` from the long logo, for the logo, icons, buttons and links | Adi's choice after Stage 5. See `docs/STYLE.md` |
 | 30 Oct 2026 | "Makin'Bug, Telford, UK" and info@makinbug.uk are enough on the site. No owner's name or street address | Adi's choice. Settled, so don't ask again |
 | 29 Oct 2026 | One "Made to Order" page for all eBay products, in three groups: Miscellaneous Bits, Airsoft Stuff, Cycling Things. No single product pages | Simpler to run and to add to. Each product is still found on Google through its eBay listing |

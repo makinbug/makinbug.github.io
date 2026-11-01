@@ -234,9 +234,14 @@ strong { font-weight: 600; }
 }
 .mb-card:nth-child(3n+2) { background: var(--tint-coral); }
 .mb-card:nth-child(3n+3) { background: var(--tint-red); }
-.mb-card:hover { color: var(--ink); text-decoration: none; transform: translateY(-2px); }
+a.mb-card:hover { color: var(--ink); text-decoration: none; transform: translateY(-2px); }
 .mb-card h2 { font-size: 22px; line-height: 1.25; margin: 0 0 8px; }
 .mb-card p { color: var(--ink-soft); font-size: 16px; margin: 0 0 16px; }
+/* Full cards on the Services page: all the text, no link */
+.mb-card-full { scroll-margin-top: 24px; }
+.mb-card-full p:last-child, .mb-card-full ul:last-child { margin-bottom: 0; }
+.mb-card-full ul { color: var(--ink-soft); font-size: 16px; margin: 0 0 16px; padding-left: 20px; }
+.mb-card-full li { margin: 0 0 4px; }
 .mb-more { margin-top: auto; font-size: 15px; font-weight: 600; color: var(--red); }
 .mb-more::after { content: " \2192"; }
 .mb-card:hover .mb-more { color: var(--red-dark); }
@@ -333,3 +338,4 @@ strong { font-weight: 600; }
 .mb-footer-logo img { width: 32px; height: 32px; }
 .mb-footer-in a { color: var(--ink); }
 .mb-footer-in a:hover { color: var(--red); }
+.mb-footer-links { display: flex; gap: 24px; }
