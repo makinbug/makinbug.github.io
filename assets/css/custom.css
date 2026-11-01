@@ -317,7 +317,8 @@ a.mb-card:hover { color: var(--ink); text-decoration: none; transform: translate
 .mb-gallery { display: grid; gap: 24px; }
 @media (min-width: 48em) { .mb-gallery { grid-template-columns: repeat(2, 1fr); } }
 .mb-gallery figure { margin: 0; }
-.mb-gallery img { display: block; width: 100%; border-radius: var(--radius); }
+.mb-gallery img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); }
+/* All gallery photos show in the same 4:3 shape; tall photos are trimmed top and bottom. */
 .mb-gallery figcaption { margin-top: 8px; font-size: 15px; color: var(--ink-soft); }
 
 /* ---------- Footer ---------- */
