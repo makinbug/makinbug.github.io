@@ -270,10 +270,10 @@ After the pull request, you:
 
 You:
 
-- [ ] Buy makinbug.uk (see "Step 1: get makinbug.uk" in the first tab).
-- [ ] Prove the domain is yours: organisation **Settings**, **Pages**, **Add a domain**, `makinbug.uk`. GitHub shows a TXT record with a name like `_github-pages-challenge-makinbug` and a value to copy. Add it in the Freethought portal's DNS, wait, then click **Verify**. Never delete this record.
-- [ ] Repo **Settings**, **Pages**, **Custom domain**: `makinbug.uk`, **Save**.
-- [ ] In Freethought's DNS, remove any parking records for `@` and `www`, then add:
+- [x] Buy makinbug.uk (see "Step 1: get makinbug.uk" in the first tab).
+- [x] Prove the domain is yours: organisation **Settings**, **Pages**, **Add a domain**, `makinbug.uk`. GitHub shows a TXT record with a name like `_github-pages-challenge-makinbug` and a value to copy. Add it in the Freethought portal's DNS, wait, then click **Verify**. Never delete this record.
+- [x] Repo **Settings**, **Pages**, **Custom domain**: `makinbug.uk`, **Save**.
+- [x] In Freethought's DNS, remove any parking records for `@` and `www`, then add:
 
 | Type | Name | Points to |
 | --- | --- | --- |
@@ -283,11 +283,11 @@ You:
 | A | @ | 185.199.111.153 |
 | CNAME | www | makinbug.github.io |
 
-- [ ] When the Pages settings say the DNS check passed, tick **Enforce HTTPS** (the padlock). It can take up to 24 hours to appear.
+- [x] When the Pages settings say the DNS check passed, tick **Enforce HTTPS** (the padlock). It can take up to 24 hours to appear.
 
 Claude (prompt: "Do the Claude step of Stage 7"):
 
-- [ ] Branch `stage-7-domain`: change baseURL in `hugo.toml` to `https://makinbug.uk/`. Build, then open the pull request. You merge it.
+- [x] Branch `stage-7-domain`: change baseURL in `hugo.toml` to `https://makinbug.uk/`. Build, then open the pull request. You merge it.
 
 Email, you:
 
