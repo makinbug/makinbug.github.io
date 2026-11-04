@@ -260,7 +260,7 @@ Claude:
 
 After the pull request, you:
 
-- [ ] Read every page once more on your phone, then merge.
+- [x] Read every page once more on your phone, then merge.
 
 **Done when:** every check in the pull request passed.
 
@@ -291,8 +291,8 @@ Claude (prompt: "Do the Claude step of Stage 7"):
 
 Email, you:
 
-- [ ] In Proton's settings, under domain names, add `makinbug.uk`. Add each record Proton shows (verification, MX, SPF, DKIM, DMARC) in Freethought's DNS.
-- [ ] Make the address you chose at Stage 3, then send a test email both ways.
+- [x] In Proton's settings, under domain names, add `makinbug.uk`. Add each record Proton shows (verification, MX, SPF, DKIM, DMARC) in Freethought's DNS.
+- [x ] Make the address you chose at Stage 3, then send a test email both ways.
 
 **Done when:** https://makinbug.uk and https://www.makinbug.uk both show the site with the padlock, and the test email works.
 
@@ -305,7 +305,7 @@ Email, you:
 - [ ] If you have a Google Business Profile, change its website link.
 - [ ] Keep Duda running for 2 to 4 weeks. If Duda lets you, add a line on its home page: "We've moved to makinbug.uk".
 - [ ] Check Duda's renewal date, then cancel it before then.
-- [ ] In a laptop vault session, ask Claude to save the plan in the wiki and update the project's links doc.
+- [ ] In a laptop vault session, ask AI to save the plan in the wiki and update the project's links doc.
 
 **Done when:** every box is ticked and Duda is closed.
 
